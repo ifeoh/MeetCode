@@ -13,6 +13,7 @@ import numpy as np
 import numpy.random as npr
 import pandas as pd
 import nltk
+import spacy
 import gensim
 import gensim.downloader as api
 
@@ -29,15 +30,17 @@ DATA_DIR = os.path.relpath("./data/")
 
 nltk.download('stopwords', download_dir=DATA_DIR)
 
-print(list(api.info()["models"].keys()))
-
+#print(list(api.info()["models"].keys()))
 
 # Cosine Similarity toy func
 #cosine_similarity = np.dot(vec1, vec2) / (np.linalg.norm(vec1) * np.linalg.norm(vec2))
 #print(f"Cosine Similarity: {cosine_similarity:.4f}")
 
-google_news_vectors = api.load('word2vec-google-news-300')
-print("Size of vocabulary: ", len(google_news_vectors))
+#google_news_vectors = api.load('word2vec-google-news-300')
+#print("Size of vocabulary: ", len(google_news_vectors))
 
-google_news_vectors["UBC"][:20]
-google_news_vectors["UBC"].shape
+nlp = spacy.load("en_core_web_md")
+
+doc = nlp("pineapple") # extract all interesting information about the document
+print(doc.vector[:10])
+
