@@ -20,7 +20,7 @@ import gensim.downloader as api
 #from comat import CooccurrenceMatrix
 from nltk.corpus import stopwords
 from nltk.tokenize import sent_tokenize, word_tokenize
-#from preprocessing import MyPreprocessor
+#from sklearn.preprocessing import MyPreprocessor
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import make_pipeline
@@ -38,3 +38,6 @@ print(list(api.info()["models"].keys()))
 
 google_news_vectors = api.load('word2vec-google-news-300')
 print("Size of vocabulary: ", len(google_news_vectors))
+
+google_news_vectors["UBC"][:20]
+google_news_vectors["UBC"].shape
