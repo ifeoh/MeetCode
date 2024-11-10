@@ -2,8 +2,29 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background: linear-gradient(to right, #72718E, #4C4A70);
+    display: flex;
+    justify-content: center;  /* Centers content horizontally */
+    align-items: center;      /* Centers content vertically */
+    height: 100vh;            /* Ensure it covers the full viewport height */
   }
   
   .App {
     text-align: center;
+    width: 100%; /* Ensure it takes full width */
   }
+
+  
+  .welcomePage {
+    background: linear-gradient(to bottom, #D3D3D3, #A9A9A9); /* Light gray gradient */
+    height: 100vh; /* Ensure it covers the full viewport height */
+  }
+
+  .logo {
+    position: absolute;
+    scale: 50%;
+    top: 0;
+    left: 0;
+    padding: 10px;  /* Optional: add some padding if needed */
+  }
+  
