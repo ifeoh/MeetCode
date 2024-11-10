@@ -621,12 +621,12 @@ body {
   }
   
   
-  @-webkit-keyframes shiny-btn1 {
+/*-webkit-keyframes shiny-btn1 {
       0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
       80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
       81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
       100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
-  }
+  } */
   
   
   /* 12 */
@@ -836,3 +836,69 @@ body {
     top: 2px;
   }
   
+/* Style for the body of the Index page */
+/* Style for the body of the Index page */
+.index-page {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+/* Table styling for the entire table */
+.styled-table {
+  width: 1000px;
+  height: 500px;
+  border-collapse: separate; /* Ensure that cells are not collapsed */
+  border-spacing: 0; /* Remove any space between cells */
+  background-color: #333;
+  border-radius: 20px; /* Round the edges of the entire table */
+  overflow: hidden; /* Ensures the rounded corners are visible */
+  color: white;
+  font-family: Poppins, sans-serif;
+}
+
+
+.styled-table th,
+.styled-table td {
+  text-align: left;
+  padding: 8px 16px;
+}
+
+.styled-table th {
+  background-color: #4C4A70; /* Dark gray header */
+  color: white;
+}
+
+.styled-table tr:nth-child(even) {
+  background-color: #333333; /* Dark gray */
+}
+
+.styled-table tr:nth-child(odd) {
+  background-color: #555555; /* Medium gray */
+}
+
+.styled-table tr:hover {
+  background-color: #9e9e9e;
+}
+
+/* Column 4 (Difficulty) Color Rules */
+.mintgreen {
+  background-color: #98FF98; /* Cool mint green */
+}
+
+.softorange {
+  background-color: #FFB84D; /* Soft orange */
+}
+
+.darkpink {
+  background-color: #FF1493; /* Dark pink */
+}
+
+/* Column 5 (Success Rate) Gradient */
+.styled-table td {
+  transition: background 0.3s ease;
+}
+
+/* Hover effect for column 2 */
+.hoverable:hover {
+  background-color: #00A9E0;  /* Startup blue */
+}
