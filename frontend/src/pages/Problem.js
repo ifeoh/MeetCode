@@ -15,7 +15,7 @@ function Problem() {
       </button>
       <br />
       <Link to="/result">
-        <button>Go to Result Page</button>
+      <button class="custom-btn btn-2"><span>Submit</span></button>
       </Link>
     </div>
   );

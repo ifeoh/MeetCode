@@ -8,7 +8,7 @@ function Index() {
       <h1>Welcome to the Dashboard</h1>
       <p>This is your dashboard page.</p>
       <Link to="/problem">
-        <button>Go to Problem Page</button>
+      <button class="custom-btn btn-4"><span>Go to problem</span></button>
       </Link>
     </div>
   );

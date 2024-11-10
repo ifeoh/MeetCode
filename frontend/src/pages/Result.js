@@ -8,7 +8,7 @@ function Result() {
       <h1>Result Page</h1>
       <p>This is the result page, where you can see your final outcome.</p>
       <Link to="/welcome">
-        <button>Go Back to Welcome Page</button>
+      <button class="custom-btn btn-10"><span>Dashboard</span></button>
       </Link>
     </div>
   );

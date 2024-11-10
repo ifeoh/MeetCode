@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 function Welcome() {
   return (
     <div>
-      <h1>Welcome to the MeetCode App!</h1>
-      <p>This is the landing page.</p>
+      <h1>Welcome to MeetCode</h1>
+      <p>A MeetCode a day keeps the social anxiety away</p>
       <Link to="/index">
-        <button>Go to Dashboard</button>
+      <button class="custom-btn btn-5"><span>Log In</span></button>
       </Link>
     </div>
   );
