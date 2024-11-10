@@ -44,4 +44,3 @@ nlp = spacy.load("en_core_web_md")
 doc = nlp("pineapple") # extract all interesting information about the document
 print(doc.vector[:10])
 
-# MADE A CHANGE
