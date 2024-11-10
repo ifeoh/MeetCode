@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Problem() {
   // Example state to represent dynamic content
-  const [content, setContent] = useState("This is the Problem page. Click the button below to proceed.");
+  const [content, setContent] = useState("The challenge problem itself goes right here.");
 
   return (
     <div>
