@@ -2,8 +2,6 @@
 
 hello there, this is our first test.
 
-Why did chicken cross the road?
-
-Because he was being chased by Kernel Sanders
+This version has the basic react skeleton
 
 git clone <repo link>
