@@ -41,5 +41,22 @@
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
   }
+
+  .result-page {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .background-image {
+    position: absolute;
+    top: 100;
+    right: 0;
+    width: 30%;
+    height: 30%;
+    background-image: url('/public/images/robot.png');
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.8; /* Adjust for visibility */
+  }
   
   /* You can add additional styling here to customize the page further */

@@ -23,10 +23,12 @@ body {
 
   .logo {
     position: absolute;
-    scale: 50%;
     top: 0;
     left: 0;
-    justify-content: left;
+    transform: scale(0.5); /* Scales the logo to 20% of its original size */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   h1 {
@@ -38,7 +40,7 @@ body {
   }
   
   p {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     text-align: center;
     font-size: 18px;

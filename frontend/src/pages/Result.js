@@ -34,6 +34,7 @@ function Result() {
 
   return (
     <div className="result-page">
+      <div className="background-image"></div>
       <h1>
         <br />
         <br />
