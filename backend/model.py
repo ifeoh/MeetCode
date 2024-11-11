@@ -8,7 +8,7 @@ sys.path.append(os.path.join(os.path.abspath("."), "code"))
 
 #from plotting_functions_unsup import *
 
-import IPython
+#import IPython
 import numpy as np
 import numpy.random as npr
 import pandas as pd
@@ -23,11 +23,13 @@ from  random import randrange
 from nltk.corpus import stopwords
 from spacy.lang.en.stop_words import STOP_WORDS
 from textblob import TextBlob
-from spacytextblob.spacytextblob import SpacyTextBlob
+#from spacytextblob.spacytextblob import SpacyTextBlob
 from nltk.tokenize import sent_tokenize, word_tokenize
-from IPython.display import display
+#from IPython.display import display
 
-
+nltk.download('punkt')
+nltk.download('punkt_tab')
+nltk.download('stopwords')
 DATA_DIR = os.path.relpath("./data/")
 
 #nltk.download('stopwords', download_dir=DATA_DIR)
@@ -43,7 +45,7 @@ DATA_DIR = os.path.relpath("./data/")
 
 sw = stopwords.words('english')
 nlp = spacy.load("en_core_web_lg")
-nlp_sm = spacy.load("en_core_web_sm")
+#nlp_sm = spacy.load("en_core_web_sm")
 
 
 
@@ -63,11 +65,9 @@ def compare_with_df(model, sim1, sim2, dissim):
     comparison = model.most_similar(positive=[sim1, sim2], negative=[dissim])
     compare_df = pd.DataFrame(comparison, columns=["Analogy word", "Score"])
 
-    display(compare_df)
+  #  display(compare_df)
 
     return compare_df
-
-
 
 
 def compare_text(presented_text, user_text):
@@ -90,7 +90,7 @@ def compare_text(presented_text, user_text):
     s2 = nlp(user_text)
 
     similarity_score = s1.similarity(s2)
-    nlp.add_pipe("spacytextblob")
+   # nlp.add_pipe("spacytextblob")
 
     preprocessed_text = " ".join(user_tokenized)
     blob = TextBlob(user_text)
