@@ -37,7 +37,7 @@ function Index() {
     <div className="index-page">
       <h1>Welcome, Timothée Chalamet</h1>
 
-      <Link to="/problem">
+      <Link to="/problem" className="table-link">
       </Link>
 
       {/* Render the 4x12 table with CSV data */}
