@@ -6,7 +6,8 @@ function Problem() {
   const [content, setContent] = useState("Consolling a grieving acquaintance");
   const [typedText, setTypedText] = useState(""); // State for letter-by-letter animation
   const [cursorVisible, setCursorVisible] = useState(true); // State to control the cursor blink
-  const prompt = "You have asked for a coffee chat with Alph, a software developer at BlueScreen Inc., your dream company. Alph ran about 10 minutes late, and appears exasperated.";
+  
+  const prompt = "You have requested a coffee chat with Alph, a software developer at BlueScreen Inc., your dream company. Alph ran about 10 minutes late, and appears exasperated.";
   const response = "Alph: Sorry, I'm late, things have just been a mess lately.";
 
   useEffect(() => {
@@ -16,16 +17,16 @@ function Problem() {
         setTypedText((prev) => prev + prompt[i]);
         i++;
       } else {
-        clearInterval(interval);
+        clearInterval(interval); // Stop when the full text is typed
       }
-    }, 10); // Faster typing speed (30ms per character)
+    }, 20); // Adjust speed for typing animation
 
     return () => clearInterval(interval);
   }, [prompt]);
 
   useEffect(() => {
     const cursorInterval = setInterval(() => {
-      setCursorVisible((prev) => !prev); // Toggle the cursor visibility
+      setCursorVisible((prev) => !prev); // Toggle cursor visibility
     }, 500); // Cursor blink every 500ms
 
     return () => clearInterval(cursorInterval);
@@ -53,8 +54,10 @@ function Problem() {
       <div className="overlay-container">
         <div className="prompt-container">
           <p className="prompt-text">
-            {typedText}
+            {typedText} {/* Display the typed prompt text */}
             <br />
+            {/* Ensure response is shown without undefined */}
+            <span className="alph-name">Alph:</span> Sorry, I'm late, things have just been a mess lately.
           </p>
           <span className={`cursor ${cursorVisible ? 'visible' : ''}`}>|</span>
         </div>

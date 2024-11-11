@@ -10,6 +10,16 @@
     gap: 10px;
     margin: 20px 0;
   }
+
+  .empathy-message {
+    background-color: #333333; /* Charcoal background */
+    color: white; /* White text */
+    font-family: 'Poppins', sans-serif; /* Poppins font */
+    padding: 3px;
+    border-radius: 25px; /* Rounded corners */
+    text-align: center; /* Center align text */
+    margin-bottom: 10px; /* Space below the rectangle */
+  }
   
   .stars {
     display: flex;

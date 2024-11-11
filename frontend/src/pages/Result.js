@@ -34,9 +34,16 @@ function Result() {
 
   return (
     <div className="result-page">
-      <h1>Success!</h1>
-      <p>You were empathetic without being pushy, and gave room for Alph to open up personally.</p>
+      <h1>
+        <br />
+        <br />
+        Success!</h1>
       
+      {/* Empathy message inside a rectangle */}
+      <div className="empathy-message">
+        <p>You were empathetic without being pushy, and gave room for Alph to open up personally.</p>
+      </div>
+
       <div className="star-rating">
         <div className="stars">
           {[...Array(3)].map((_, index) => (

@@ -26,7 +26,7 @@ body {
     scale: 50%;
     top: 0;
     left: 0;
-    padding: 10px;  /* Optional: add some padding if needed */
+    justify-content: left;
   }
 
   h1 {
