@@ -4,32 +4,18 @@ import '../Problem.css';
 
 function Problem() {
   const [content, setContent] = useState("Consolling a grieving acquaintance");
-  const [typedText, setTypedText] = useState(""); // State for letter-by-letter animation
-  const [cursorVisible, setCursorVisible] = useState(true); // State to control the cursor blink
+  const [isVisible, setIsVisible] = useState(false); // State for fade-in effect
   
   const prompt = "You have requested a coffee chat with Alph, a software developer at BlueScreen Inc., your dream company. Alph ran about 10 minutes late, and appears exasperated.";
   const response = "Alph: Sorry, I'm late, things have just been a mess lately.";
 
   useEffect(() => {
-    let i = 0;
-    const interval = setInterval(() => {
-      if (i < prompt.length) {
-        setTypedText((prev) => prev + prompt[i]);
-        i++;
-      } else {
-        clearInterval(interval); // Stop when the full text is typed
-      }
-    }, 20); // Adjust speed for typing animation
+    // Trigger the fade-in effect after a slight delay
+    const timeout = setTimeout(() => {
+      setIsVisible(true);
+    }, 500); // Adjust delay as needed
 
-    return () => clearInterval(interval);
-  }, [prompt]);
-
-  useEffect(() => {
-    const cursorInterval = setInterval(() => {
-      setCursorVisible((prev) => !prev); // Toggle cursor visibility
-    }, 500); // Cursor blink every 500ms
-
-    return () => clearInterval(cursorInterval);
+    return () => clearTimeout(timeout);
   }, []);
 
   // Handle the input change for the chat bar
@@ -53,13 +39,12 @@ function Problem() {
       {/* Overlay container for the prompt, response, and chat bar */}
       <div className="overlay-container">
         <div className="prompt-container">
-          <p className="prompt-text">
-            {typedText} {/* Display the typed prompt text */}
-            <br />
-            {/* Ensure response is shown without undefined */}
-            <span className="alph-name">Alph:</span> Sorry, I'm late, things have just been a mess lately.
+          {/* Fade-in effect */}
+          <p className={`prompt-text ${isVisible ? 'fade-in' : ''}`}>
+            {prompt} {/* Display the entire prompt */}
+            <br /> {/* Break between the prompt and Alph's words */}
+            <span className="alph-name"><br />Alph:</span> Sorry, I'm late, my personal life is just a mess lately.
           </p>
-          <span className={`cursor ${cursorVisible ? 'visible' : ''}`}>|</span>
         </div>
 
         {/* Chat bar and Submit button on the same line */}

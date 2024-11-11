@@ -36,9 +36,15 @@
   }
   
   /* Text inside the prompt */
-  .prompt-text {
-    white-space: pre-wrap;  /* Preserve line breaks */
-  }
+ /* Fade-in effect for prompt text */
+.prompt-text {
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* Adjust timing and easing as needed */
+}
+
+.prompt-text.fade-in {
+  opacity: 1;
+}
   
   /* Alph's name style */
   .alph-name {

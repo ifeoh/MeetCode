@@ -901,3 +901,25 @@ body {
 .styled-table td {
   transition: background 0.3s ease;
 }
+
+/* Remove any default link styles */
+.table-link {
+  text-decoration: none;  /* Remove underlines */
+  color: white;  /* Change text color to white */
+}
+
+.table-link:hover {
+  color: #ddd;  /* Optional: change color on hover */
+}
+
+/* Apply styles globally to all links */
+a {
+  color: white !important;       /* Set the link color to white */
+  text-decoration: none !important; /* Remove the underline */
+}
+
+/* Optional: Change the link color on hover */
+a:hover {
+  color: #ddd !important;       /* Light gray color on hover */
+  text-decoration: none;        /* Optional: no underline on hover */
+}
