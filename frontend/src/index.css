@@ -1,11 +1,12 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Poppins, sans-serif;
+    color: white;
     margin: 0;
     padding: 0;
     background: linear-gradient(to right, #72718E, #4C4A70);
     display: flex;
-    justify-content: center;  /* Centers content horizontally */
-    align-items: center;      /* Centers content vertically */
+    justify-content: center;
+    align-items: center;  /* Centers content horizontally */ /* Centers content vertically */
     height: 100vh;
     text-align: center;            /* Ensure it covers the full viewport height */
   }
@@ -15,10 +16,9 @@ body {
     width: 100%; /* Ensure it takes full width */
   }
 
-  
   .welcomePage {
     background: linear-gradient(to bottom, #D3D3D3, #A9A9A9); /* Light gray gradient */
-    height: 100vh; /* Ensure it covers the full viewport height */
+    height: 100vh; 
   }
 
   .logo {
@@ -29,15 +29,12 @@ body {
     padding: 10px;  /* Optional: add some padding if needed */
   }
 
-  body {
-    background: #e0e5ec;
-  }
   h1 {
     position: relative;
     text-align: center;
-    color: #353535;
+    color: white;
     font-size: 50px;
-    font-family: "Cormorant Garamond", serif;
+    font-family: Poppins, serif;
   }
   
   p {
@@ -45,7 +42,7 @@ body {
     font-weight: 300;
     text-align: center;
     font-size: 18px;
-    color: #676767;
+    color: #ffffff;
   }
   .frame {
     width: 90%;
@@ -87,9 +84,14 @@ body {
   
   /* 2 */
   .btn-2 {
-    background: rgb(96,9,240);
-    background: linear-gradient(0deg, rgba(96,9,240,1) 0%, rgba(129,5,240,1) 100%);
+    background: rgb(255, 255, 255);
     border: none;
+    border-radius: 40px;
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    width: 300px;
+    height: 60px;
     
   }
   .btn-2:before {
@@ -896,9 +898,4 @@ body {
 /* Column 5 (Success Rate) Gradient */
 .styled-table td {
   transition: background 0.3s ease;
-}
-
-/* Hover effect for column 2 */
-.hoverable:hover {
-  background-color: #00A9E0;  /* Startup blue */
 }

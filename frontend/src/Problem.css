@@ -1,0 +1,104 @@
+/* Problem page styling */
+.problem-page {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Problem image styling */
+  .problem-image {
+    width: 100%;
+    max-width: 900px;
+    margin: 10px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Overlay container for the prompt and chat bar */
+  .overlay-container {
+    position: relative;
+    padding: 20px;
+  }
+  
+  /* Prompt container styling */
+  .prompt-container {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: #333333;  /* Charcoal grey background */
+    border-radius: 20px;
+    padding: 10px;
+    min-width: 900px;
+    max-width: 900px;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 80%; /* 80% width of the container */
+  }
+  
+  /* Text inside the prompt */
+  .prompt-text {
+    white-space: pre-wrap;  /* Preserve line breaks */
+  }
+  
+  /* Alph's name style */
+  .alph-name {
+    font-weight: bold;
+    color: purple;
+    padding-right: 5px;
+  }
+  
+  /* Cursor styling */
+  .cursor {
+    visibility: hidden;
+  }
+  
+  .cursor.visible {
+    visibility: visible;
+  }
+  
+  /* Chat bar container */
+  .chat-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+text-align: left;   }
+  
+  /* Chat bar styling */
+  .chat-bar {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .chat-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #333333;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .chat-input::placeholder {
+    color: #bbb;
+  }
+  
+  /* Button styling */
+  .custom-btn {
+    background-color: white; /* Dark pink for the button */
+    padding: 10px 20px;
+    border-radius: 40px;
+    cursor: pointer;
+    border: none;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+  }
+  
+  .custom-btn:hover {
+    background-color: #FF86A7;
+  }

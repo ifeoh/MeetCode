@@ -1,0 +1,35 @@
+.result-page {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .star-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .stars {
+    display: flex;
+  }
+  
+  .star {
+    font-size: 3rem;
+    color: #d3d3d3; /* Gray for empty stars */
+    transition: color 0.3s;
+  }
+  
+  .star.filled {
+    color: gold; /* Gold for filled stars */
+  }
+  
+  .percentage {
+    font-size: 2rem;
+    margin-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+  }
+  
+  /* You can add additional styling here to customize the page further */

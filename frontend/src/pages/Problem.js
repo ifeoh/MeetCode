@@ -1,22 +1,83 @@
-// src/pages/Problem.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import '../Problem.css';
 
 function Problem() {
-  // Example state to represent dynamic content
-  const [content, setContent] = useState("The challenge problem itself goes right here.");
+  const [content, setContent] = useState("Consolling a grieving acquaintance");
+  const [typedText, setTypedText] = useState(""); // State for letter-by-letter animation
+  const [cursorVisible, setCursorVisible] = useState(true); // State to control the cursor blink
+  const prompt = "You have asked for a coffee chat with Alph, a software developer at BlueScreen Inc., your dream company. Alph ran about 10 minutes late, and appears exasperated.";
+  const response = "Alph: Sorry, I'm late, things have just been a mess lately.";
+
+  useEffect(() => {
+    let i = 0;
+    const interval = setInterval(() => {
+      if (i < prompt.length) {
+        setTypedText((prev) => prev + prompt[i]);
+        i++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 10); // Faster typing speed (30ms per character)
+
+    return () => clearInterval(interval);
+  }, [prompt]);
+
+  useEffect(() => {
+    const cursorInterval = setInterval(() => {
+      setCursorVisible((prev) => !prev); // Toggle the cursor visibility
+    }, 500); // Cursor blink every 500ms
+
+    return () => clearInterval(cursorInterval);
+  }, []);
+
+  // Handle the input change for the chat bar
+  const [message, setMessage] = useState("");
+  const handleInputChange = (event) => {
+    setMessage(event.target.value);
+  };
 
   return (
-    <div>
-      <h1>Problem Page</h1>
+    <div className="problem-page">
+      <h1>Problem 01</h1>
       <p>{content}</p>
-      <button onClick={() => setContent("Dynamic content updated!")}>
-        Click to Update Content
-      </button>
-      <br />
-      <Link to="/result">
-      <button class="custom-btn btn-2"><span>Submit</span></button>
-      </Link>
+
+      {/* Image */}
+      <img
+        src="/images/coffee-chat.png"
+        alt="Coffee chat"
+        className="problem-image"
+      />
+      
+      {/* Overlay container for the prompt, response, and chat bar */}
+      <div className="overlay-container">
+        <div className="prompt-container">
+          <p className="prompt-text">
+            {typedText}
+            <br />
+          </p>
+          <span className={`cursor ${cursorVisible ? 'visible' : ''}`}>|</span>
+        </div>
+
+        {/* Chat bar and Submit button on the same line */}
+        <div className="chat-bar-container">
+          <div className="chat-bar">
+            <input
+              type="text"
+              value={message}
+              onChange={handleInputChange}
+              placeholder="Type your message..."
+              className="chat-input"
+            />
+          </div>
+
+          <Link to="/result">
+            <button className="custom-btn btn-2">
+              <span>Submit</span>
+            </button>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
